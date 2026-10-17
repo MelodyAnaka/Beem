@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beem Brand Studio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&family=Figtree:wght@400;500;700&family=Shrikhand&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<div class="wrap">
+  <header class="bar">
+    <div class="mark">Beem</div>
+    <button class="theme" id="themeBtn" type="button">Switch theme</button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-copy">
+      <div class="eyebrow">Brand Studio · Draft 1</div>
+      <h1>Beem</h1>
+      <p class="tag">Be every shade of you.</p>
+      <p class="lede">Made for the everyday girl. Pick a shade to see how the brand looks around it. The page colors, tube and shop below all follow your choice.</p>
+      <div class="chips" data-chips role="group" aria-label="Choose a shade"></div>
+    </div>
+    <div class="stage" id="stage">
+      <img class="stage-img" src="Beem1.jpeg" width="1000" height="1000" alt="Beem Cocoa Suede box in blush pink with a cocoa brown lip print, on a dark cocoa background">
+      <div class="cap"><b id="shName">Clear</b><span id="shFinish"></span><span id="shLine"></span></div>
+    </div>
+  </section>
+
+  <!-- PACKAGING -->
+  <section>
+    <div class="head">
+      <div class="eyebrow">Your packaging</div>
+      <h2>This is already Beem.</h2>
+      <p class="lede">Your own box sets the direction for everything else. I took the colors and feeling from it, so the website, shop and social posts all match what she will hold in her hand.</p>
+    </div>
+    <div class="pack">
+      <img src="Beem1.jpeg" width="1000" height="1000" alt="Beem lip product box in blush pink with a cocoa brown panel of glossy lips, photographed on a dark cocoa background">
+      <div class="pack-copy">
+        <ul class="reads">
+          <li><i style="background:#EDCCC7"></i><span><b>Blush box.</b> A soft pink-beige that feels warm and kind on every skin tone.</span></li>
+          <li><i style="background:#7A2E1E"></i><span><b>Cocoa panel.</b> Rich brown lips and a kiss print. This is the lead color of the brand.</span></li>
+          <li><i style="background:#25110A"></i><span><b>Deep cocoa studio.</b> The dark background makes the box glow, so we use it for dark mode and photography.</span></li>
+          <li><i style="background:linear-gradient(135deg,#EDCCC7,#7A2E1E)"></i><span><b>Three voices of type.</b> A fat, friendly Beem wordmark, a classic serif for "Be every shade of you.", and a small script for the shade name. The shade name on the side is Cocoa Suede.</span></li>
+        </ul>
+        <p class="note">Next, send me the logo as a flat file (PNG with a clear background, or SVG) so I can place the exact wordmark on the site.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PALETTE -->
+  <section>
+    <div class="head">
+      <div class="eyebrow">Color</div>
+      <h2>Cocoa, blush and a little glow.</h2>
+      <p class="lede">The main colors come from your box: cocoa brown and blush pink. Champagne, Shimmer Rose and Ruby are the shade colors, used for product details and highlights. Tap a code to copy it.</p>
+    </div>
+    <div class="swatchbar" aria-hidden="true">
+      <div class="w3" style="background:#EDCCC7"></div><div class="w3" style="background:#7A2E1E"></div><div class="w2" style="background:#25110A"></div><div style="background:#E4C48F"></div><div style="background:#E5A294"></div><div style="background:#A31D3F"></div>
+    </div>
+    <div class="pal" id="pal"></div>
+  </section>
+
+  <!-- TYPE -->
+  <section>
+    <div class="head">
+      <div class="eyebrow">Type</div>
+      <h2>Try three voices for the letters.</h2>
+      <p class="lede">The display face carries the Beem name and headlines. The body face stays simple and friendly for product pages and packaging back labels. Switching here changes the whole page.</p>
+    </div>
+    <div class="tabs" id="tabs" role="group" aria-label="Type pairing">
+      <button class="tab" type="button" data-type="glow" aria-pressed="true">Glow · soft and chunky</button>
+      <button class="tab" type="button" data-type="pop" aria-pressed="false">Pop · bold and round</button>
+      <button class="tab" type="button" data-type="luxe" aria-pressed="false">Luxe · high fashion</button>
+    </div>
+    <div class="spec">
+      <div>
+        <div class="utl">Display</div>
+        <div class="big">Be every shade of you.</div>
+        <div class="sub">Clear. Champagne. Shimmer. Ruby. Cocoa Suede.</div>
+        <div class="roles" id="roleDisplay">Shrikhand</div>
+      </div>
+      <div>
+        <div class="utl">Body</div>
+        <p class="bd">Beem lip gloss gives you a soft, glassy shine that feels light, never sticky. Wear it alone, over your favorite lipstick, or tap it on your cheeks for a glow that lasts through the day.</p>
+        <div class="roles">Figtree · 400, 500, 700</div>
+        <div class="utl" style="margin-top:10px">Labels and prices</div>
+        <div class="roles" style="color:var(--fg)">NET 8 ML · ₦6,500 · SHADE 03</div>
+        <div class="roles">DM Mono</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGO -->
+  <section>
+    <div class="head">
+      <div class="eyebrow">Logo wordmark</div>
+      <h2>One name on four backgrounds.</h2>
+      <p class="lede">These are stand-ins. Your real Beem wordmark on the box is fatter and has more swing, so the final site will use your own logo file.</p>
+    </div>
+    <div class="logos">
+      <div class="logo l1"><div class="w">Beem</div></div>
+      <div class="logo l2"><div class="w">Beem</div></div>
+      <div class="logo l3"><div class="w">Beem</div></div>
+      <div class="logo l4"><div class="w">Beem</div></div>
+    </div>
+    <p class="note">The stand-in wordmark follows the type pairing you choose above. Always keep clear space equal to the height of the letter "e" around it.</p>
+  </section>
+
+  <!-- VOICE -->
+  <section>
+    <div class="head">
+      <div class="eyebrow">How she feels</div>
+      <h2>When she puts on Beem.</h2>
+      <p class="lede">Every choice on this page serves three feelings. If a design, caption or product idea does not create at least one, we leave it out.</p>
+    </div>
+    <div class="feel">
+      <div class="card"><h3>Seen</h3><p>The shades are made to flatter deep, medium and light skin. She finds her color without hunting for it.</p></div>
+      <div class="card"><h3>Effortless</h3><p>One swipe, no mirror needed. Beem is for the bus, the office, church, class and the quick stop before the party.</p></div>
+      <div class="card"><h3>Proud</h3><p>The tube is pretty enough to leave on the table. Friends ask what she is wearing, and it feels good to say Beem.</p></div>
+    </div>
+    <div class="say">
+      <div class="card yes"><b>We say</b><ul><li>"Put it on. Go shine."</li><li>"Five shades. One for every mood."</li><li>"Looks like you, only glowing."</li></ul></div>
+      <div class="card no"><b>We avoid</b><ul><li>"Fix your flaws" or "perfect skin" language</li><li>Stiff luxury talk that makes her feel outside the brand</li><li>Pressure, filters and comparison</li></ul></div>
+    </div>
+  </section>
+
+  <!-- SHOP TEST -->
+  <section>
+    <div class="head">
+      <div class="eyebrow">Site test</div>
+      <h2>See Beem as a shop.</h2>
+      <p class="lede">This is a preview of how the product page will look. The price and bag button are examples only. Nothing is sold here.</p>
+    </div>
+    <div class="shop">
+      <div class="shop-top"><div class="mark">Beem</div><nav><span>Shop</span><span>Shades</span><span>Our story</span></nav><div class="bag" id="bag">Bag · 0</div></div>
+      <div class="shop-body">
+        <div class="shop-img" id="shopImg">
+          <svg viewBox="0 0 140 340" aria-hidden="true">
+            <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--sa)"/><stop offset="1" style="stop-color:var(--sb)"/></linearGradient></defs>
+            <rect x="44" y="6" width="52" height="98" rx="14" style="fill:var(--cap)"/>
+            <rect x="40" y="96" width="60" height="12" rx="4" style="fill:var(--champ)"/>
+            <rect x="36" y="106" width="68" height="226" rx="28" fill="url(#g2)" style="stroke:var(--tubeline)" stroke-width="1.5"/>
+            <rect x="47" y="132" width="9" height="150" rx="4.5" fill="#fff" opacity=".42"/>
+            <text transform="translate(86 312) rotate(-90)" style="font-family:var(--display);fill:var(--labelc)" font-size="30">Beem</text>
+          </svg>
+        </div>
+        <div class="shop-info">
+          <div class="eyebrow">Lip gloss · 8 ml</div>
+          <h3 style="font-size:34px" id="shopName">Clear</h3>
+          <p class="lede" id="shopLine"></p>
+          <div class="chips" data-chips role="group" aria-label="Choose a shade"></div>
+          <div class="price">₦6,500 <span class="note">sample price</span></div>
+          <button class="cta" id="add" type="button">Add to bag</button>
+          <div class="status" id="status" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section>
+    <div class="head">
+      <div class="eyebrow">Step by step</div>
+      <h2>How we build Beem from nothing.</h2>
+      <p class="lede">The order matters. Identity first, because everything else (the tube, the box, the website, the photos) is built from it.</p>
+    </div>
+    <ol class="road">
+      <li><div><b>Brand foundations</b><span class="d">Who she is, what Beem promises her, and five words that describe the brand. This page is a first draft of that.</span></div><span class="pill now">Now</span></li>
+      <li><div><b>Visual identity</b><span class="d">Final logo, colors, type, and a one-page brand guide. We build it from your box and your logo file.</span></div><span class="pill now">Now</span></li>
+      <li><div><b>Product and shade brief</b><span class="d">Finish, scent, texture and the exact look of Clear, Champagne, Shimmer, Ruby and Cocoa Suede on deep, medium and light skin.</span></div><span class="pill next">Next</span></li>
+      <li><div><b>Packaging design</b><span class="d">Tube, outer box, labels and ingredient text, sized to your supplier's real dimensions.</span></div><span class="pill next">Next</span></li>
+      <li><div><b>Make samples</b><span class="d">Find a manufacturer, request samples, test on real skin and fix the formula before any large order.</span></div><span class="pill">Later</span></li>
+      <li><div><b>Register and protect</b><span class="d">Register the business with CAC, trademark the name and logo, and start NAFDAC product registration. Check current requirements with each agency.</span></div><span class="pill">Later</span></li>
+      <li><div><b>Website and payments</b><span class="d">Build the shop from this design with local payments, delivery zones and a simple checkout.</span></div><span class="pill">Later</span></li>
+      <li><div><b>Photos, content and launch</b><span class="d">Product shots, creators wearing the five shades, a launch date, and an Instagram and TikTok plan.</span></div><span class="pill">Later</span></li>
+    </ol>
+  </section>
+
+  <section class="ask">
+    <div class="eyebrow">What I need from you</div>
+    <h2 style="font-size:28px">Three quick answers get us to version 3.</h2>
+    <ol>
+      <li>Is Cocoa Suede a fifth shade next to the other four? I added it to the picker. I can remove it if not.</li>
+      <li>Send your Beem logo as a flat file (PNG with a clear background, or SVG).</li>
+      <li>Is Beem lip gloss only, or will it include cheek and eye products too?</li>
+    </ol>
+  </section>
+
+  <footer>Beem Brand Studio · draft 2, October 2026. Colors, names and prices are working examples.</footer>
+</div>
+
+<script>
+(function () {
+  var shades = {
+    clear: { name: 'Clear', finish: 'Glass shine', line: 'Your lips, just lit. Wear it alone or over any color.', a: '#F7ECE9', b: '#E2C4C4', label: '#2B1417', sparkle: false },
+    champagne: { name: 'Champagne', finish: 'Soft gold glow', line: 'A warm gold that flatters deep and light skin alike.', a: '#F0D9AB', b: '#D3A965', label: '#2B1417', sparkle: false },
+    shimmer: { name: 'Shimmer', finish: 'Rose pearl sparkle', line: 'Tiny sparkles that catch the light when she smiles.', a: '#F4C4B7', b: '#D4857A', label: '#2B1417', sparkle: true },
+    ruby: { name: 'Ruby', finish: 'Deep wet red', line: 'The bold one. Rich red with a mirror shine.', a: '#C23558', b: '#7E1230', label: '#FFFFFF', sparkle: false },
+    cocoa: { name: 'Cocoa Suede', finish: 'Warm cocoa brown', line: 'A rich chocolate brown that looks beautiful on every skin tone.', a: '#9A4A38', b: '#6E2618', label: '#FFFFFF', sparkle: false }
+  };
+  var order = ['clear', 'champagne', 'shimmer', 'ruby', 'cocoa'];
+  var current = 'clear';
+  var bagCount = 0;
+  var root = document.documentElement;
+  var $ = function (id) { return document.getElementById(id); };
+
+  var groups = document.querySelectorAll('[data-chips]');
+  groups.forEach(function (g) {
+    order.forEach(function (k) {
+      var s = shades[k];
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'chip'; b.dataset.k = k; b.setAttribute('aria-pressed', 'false');
+      b.style.setProperty('--ca', s.a); b.style.setProperty('--cb', s.b);
+      b.innerHTML = '<span class="dot"></span>' + s.name;
+      b.addEventListener('click', function () { current = k; render(); });
+      g.appendChild(b);
+    });
+  });
+
+  function render() {
+    var s = shades[current];
+    root.style.setProperty('--sa', s.a);
+    root.style.setProperty('--sb', s.b);
+    root.style.setProperty('--labelc', s.label);
+    $('shName').textContent = s.name;
+    $('shFinish').textContent = s.finish;
+    $('shLine').textContent = s.line;
+    $('shopName').textContent = s.name;
+    $('shopLine').textContent = s.line;
+    $('stage').classList.toggle('is-sparkly', s.sparkle);
+    $('status').textContent = '';
+    document.querySelectorAll('.chip').forEach(function (c) {
+      c.setAttribute('aria-pressed', c.dataset.k === current ? 'true' : 'false');
+    });
+  }
+
+  $('add').addEventListener('click', function () {
+    bagCount += 1;
+    $('bag').textContent = 'Bag · ' + bagCount;
+    $('status').textContent = shades[current].name + ' added. This is a preview, so nothing was bought.';
+  });
+
+  var pal = [
+    { n: 'Cocoa', r: 'Lead color · logo, buttons, headlines', h: '#7A2E1E' },
+    { n: 'Blush', r: 'Box color · backgrounds, cards', h: '#EDCCC7' },
+    { n: 'Night Cocoa', r: 'Dark mode and photo backdrops', h: '#25110A' },
+    { n: 'Champagne', r: 'Shade color · gold details', h: '#E4C48F' },
+    { n: 'Shimmer Rose', r: 'Shade color · soft highlights', h: '#E5A294' },
+    { n: 'Ruby', r: 'Shade color · bold accents', h: '#A31D3F' }
+  ];
+  var palEl = $('pal');
+  pal.forEach(function (c) {
+    var d = document.createElement('div');
+    d.className = 'sw';
+    d.innerHTML = '<div class="chipc" style="background:' + c.h + '"></div><div class="meta"><b>' + c.n + '</b><small>' + c.r + '</small><button type="button" class="hex" data-h="' + c.h + '">' + c.h + '</button></div>';
+    palEl.appendChild(d);
+  });
+  palEl.addEventListener('click', function (e) {
+    var b = e.target.closest('.hex');
+    if (!b) return;
+    var h = b.dataset.h;
+    function done() { b.textContent = 'Copied'; setTimeout(function () { b.textContent = h; }, 1200); }
+    try {
+      navigator.clipboard.writeText(h).then(done, function () { b.textContent = h + ' · select to copy'; });
+    } catch (err) { b.textContent = h + ' · select to copy'; }
+  });
+
+  var typeNames = { glow: 'Shrikhand', pop: 'Bricolage Grotesque · 800', luxe: 'Bodoni Moda · 500' };
+  $('tabs').addEventListener('click', function (e) {
+    var b = e.target.closest('.tab');
+    if (!b) return;
+    root.dataset.type = b.dataset.type;
+    $('roleDisplay').textContent = typeNames[b.dataset.type];
+    document.querySelectorAll('.tab').forEach(function (t) { t.setAttribute('aria-pressed', t === b ? 'true' : 'false'); });
+  });
+
+  $('themeBtn').addEventListener('click', function () {
+    var dark = root.dataset.theme === 'dark' || (!root.dataset.theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    root.dataset.theme = dark ? 'light' : 'dark';
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>

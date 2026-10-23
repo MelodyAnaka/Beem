@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campaign | Beem</title>
+  <meta name="description" content="See every Beem product in the wild. Be every shade of you.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="campaign.css">
+</head>
+<body>
+  <div class="inner">
+
+    <header class="top">
+      <a class="logo" href="index.html" aria-label="Beem home">Beem</a>
+      <nav aria-label="Main">
+        <a href="index.html#shop">Shop</a>
+        <a href="index.html#lineup">Shades</a>
+        <a href="campaign.html" aria-current="page">Campaign</a>
+      </nav>
+    </header>
+
+    <section class="intro">
+      <div class="eyebrow">The campaign</div>
+      <h1>One squeeze. One swipe.</h1>
+      <p>Rich brown shine for the everyday girl. See every Beem product in the wild, and tap a picture to see it full screen.</p>
+    </section>
+
+    <!-- Filter buttons are created automatically by campaign.js -->
+    <div class="filters" id="filters" role="group" aria-label="Filter by product"></div>
+
+    <!--
+      HOW TO ADD OR CHANGE A PICTURE
+      1. Put the image file in the same folder as this page.
+      2. Copy one of the <button class="tile"> blocks below.
+      3. Change: data-p (squeeze / bottle / box), the image file name,
+         the alt text (describe the photo), the tag and the caption.
+    -->
+    <div class="wall" id="wall">
+
+      <button class="tile" type="button" data-p="Squeeze tube">
+        <img src="Beem6.jpg" alt="Woman holding a Beem squeeze tube to her glossy lips" loading="lazy">
+        <span class="shade"><span class="tag">Squeeze tube</span><span class="cap">Be every shade of you.</span></span>
+      </button>
+
+      <button class="tile" type="button" data-p="Gloss bottle">
+        <img src="Beem6.jpg" alt="Four Beem gloss bottles in a row" loading="lazy">
+        <span class="shade"><span class="tag">Gloss bottle</span><span class="cap">Four shades, one easy shine.</span></span>
+      </button>
+
+      <button class="tile" type="button" data-p="Squeeze tube">
+        <img src="Beem6.jpg" alt="Woman touching up her lips with a Beem tube" loading="lazy">
+        <span class="shade"><span class="tag">Squeeze tube</span><span class="cap">Rich brown shine, touch up anywhere.</span></span>
+      </button>
+
+      <button class="tile" type="button" data-p="The box">
+        <img src="Beem6.jpg" alt="The Beem box on a dark cocoa background" loading="lazy">
+        <span class="shade"><span class="tag">The box</span><span class="cap">Ready to gift.</span></span>
+      </button>
+
+      <button class="tile" type="button" data-p="Gloss bottle">
+        <img src="Beem6.jpg" alt="Close-up of glossy brown lips with a Beem applicator" loading="lazy">
+        <span class="shade"><span class="tag">Gloss bottle</span><span class="cap">Deep, warm brown. The shade nudes keep forgetting.</span></span>
+      </button>
+
+      <button class="tile" type="button" data-p="The box">
+        <img src="Beem6.jpg" alt="Beem gloss in the back pocket of a pair of jeans" loading="lazy">
+        <span class="shade"><span class="tag">The box</span><span class="cap">Always in your back pocket.</span></span>
+      </button>
+
+    </div>
+
+    <section class="shopband">
+      <h2>Found your shade?</h2>
+      <a class="btn" href="index.html#shop">Shop the shades</a>
+    </section>
+
+    <footer>
+      <a class="logo small" href="index.html" aria-label="Beem home">Beem</a>
+      <span>Be every shade of you.</span>
+    </footer>
+  </div>
+
+  <!-- Full-screen viewer (opens when a picture is tapped) -->
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Campaign picture" hidden>
+    <button class="ctl x" id="lbx" type="button" aria-label="Close">&times;</button>
+    <button class="ctl prev" id="lbp" type="button" aria-label="Previous picture">&lsaquo;</button>
+    <img id="lbimg" alt="">
+    <button class="ctl next" id="lbn" type="button" aria-label="Next picture">&rsaquo;</button>
+    <div class="meta"><span class="tag" id="lbtag"></span><span id="lbcap"></span></div>
+  </div>
+
+  <script src="campaign.js"></script>
+</body>
+</html>

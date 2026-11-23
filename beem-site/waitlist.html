@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join the waitlist — beem</title>
+  <meta name="description" content="Join the beem waitlist for first access to our lip gloss launch.">
+  <meta property="og:title" content="Join the waitlist — beem">
+  <meta property="og:image" content="images/hero-bottles.jpg">
+  <meta name="theme-color" content="#5a0f1f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main">
+    <a href="index.html" class="logo" aria-label="beem home">beem</a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span></button>
+    <ul class="nav__links" id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">Our story</a></li>
+      <li><a href="waitlist.html" class="btn" aria-current="page">Join the waitlist</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap waitlist">
+    <aside class="waitlist__aside">
+      <span class="eyebrow">the waitlist</span>
+      <h1 style="font-size: clamp(2.2rem, 4.5vw, 3.4rem);">Be first in line.</h1>
+      <p class="lead">Tell us a little about you and we will let you know the moment beem is ready.</p>
+      <ul class="perks">
+        <li>First access when we launch</li>
+        <li>Early news on shades and drops</li>
+        <li>No spam. Just the good stuff.</li>
+      </ul>
+      <div class="img"><img src="images/tubes-trio.webp" alt="Beem squeeze tubes in cream, blush and wine" loading="lazy"></div>
+    </aside>
+
+    <div class="form" id="waitlist-card">
+      <form id="waitlist-form" novalidate>
+        <div class="form-error" id="form-error" role="alert">Something went wrong sending that. Please check your connection and try again.</div>
+
+        <div class="row2">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Ada Okafor">
+            <div class="error">Please add your name.</div>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@email.com">
+            <div class="error">Please enter a valid email.</div>
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label for="phone">WhatsApp / phone <span class="opt">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="0801 234 5678">
+            <div class="error">That number does not look right.</div>
+          </div>
+          <div class="field">
+            <label for="city">City <span class="opt">(optional)</span></label>
+            <input type="text" id="city" name="city" autocomplete="address-level2" placeholder="Lagos">
+          </div>
+        </div>
+
+        <fieldset class="field" id="product-field">
+          <legend>What are you interested in?</legend>
+          <div class="choices">
+            <label class="choice"><input type="checkbox" name="products" value="tube"><span>Squeeze tube<small>₦5,500</small></span></label>
+            <label class="choice"><input type="checkbox" name="products" value="gloss"><span>Wand gloss<small>₦8,000</small></span></label>
+          </div>
+          <div class="error">Pick at least one.</div>
+        </fieldset>
+
+        <fieldset class="field" id="shade-field" hidden>
+          <legend>Favourite shades <span class="opt">(optional)</span></legend>
+          <div class="shade-chips" id="shade-chips"></div>
+        </fieldset>
+
+        <div class="field">
+          <label for="heard">How did you find us? <span class="opt">(optional)</span></label>
+          <select id="heard" name="heard">
+            <option value="">Select one</option>
+            <option>Instagram</option>
+            <option>TikTok</option>
+            <option>X (Twitter)</option>
+            <option>WhatsApp</option>
+            <option>A friend</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <!-- spam trap: leave empty -->
+        <div class="hp" aria-hidden="true">
+          <label>Company <input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <div class="field">
+          <label class="consent">
+            <input type="checkbox" name="consent">
+            <span>I agree to be contacted by beem about the launch. I can unsubscribe at any time.</span>
+          </label>
+          <div class="error">Please tick this so we can contact you.</div>
+        </div>
+
+        <button type="submit" class="btn btn--block" id="submit-btn">Join the waitlist</button>
+        <p class="small-note" id="test-note" hidden style="margin-top:1rem;text-align:center;">Test mode: no form endpoint is set yet, so sign-ups stay in this browser. See <code>js/waitlist.js</code>.</p>
+      </form>
+
+      <div class="success" id="success" role="status">
+        <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <h2>You are on the list, <span id="success-name"></span>.</h2>
+        <p class="lead" style="margin-inline:auto;">Thank you. We will be in touch as soon as beem is ready.</p>
+        <p style="margin-top:1.5rem;"><a href="shop.html" class="btn btn--ghost">Browse the range</a></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" class="logo">beem</a>
+        <p>Soft colour, made easy.</p>
+      </div>
+      <div>
+        <h4>explore</h4>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="waitlist.html">Waitlist</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>say hi</h4>
+        <ul>
+          <li><a href="mailto:hello@beem.com">hello@beem.com</a></li>
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> beem. All rights reserved.</span>
+      <span>Made with care in Nigeria</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/waitlist.js"></script>
+</body>
+</html>
